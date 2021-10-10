@@ -1,0 +1,348 @@
+{
+	"info": {
+		"_postman_id": "cafe6c48-021e-48b1-ae50-ec57d705a3c4",
+		"name": "Geral",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "tarefa - GET Com Super",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2MzM4OTYwNDEsInVzZXJfbmFtZSI6InVzZXIwM0BpdGF1LmNvbS5iciIsImp0aSI6ImY0NWQ4ZWZkLWNmZTAtNDdjOS1iZjZlLWE4YzQzNmQxNDc3MyIsImNsaWVudF9pZCI6Iml0YXUtY2xpZW50Iiwic2NvcGUiOlsicmVhZCIsIndyaXRlIl19.9hwCQFRevng83x4kPjEC4z6unWbzlqJhcxG_ahctGlQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/todo?status",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"todo"
+					],
+					"query": [
+						{
+							"key": "status",
+							"value": "pedding",
+							"disabled": true
+						},
+						{
+							"key": "status",
+							"value": "completed",
+							"disabled": true
+						},
+						{
+							"key": "status",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "tarefa - GET user não admin",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2MzM4Njg3MDIsInVzZXJfbmFtZSI6InVzZXIwM0BpdGF1LmNvbS5iciIsImp0aSI6IjRhMjQ0ZWNjLTljOWEtNDMwMS1iZmQwLTczMzQwZmNkM2QzZSIsImNsaWVudF9pZCI6Iml0YXUtY2xpZW50Iiwic2NvcGUiOlsicmVhZCIsIndyaXRlIl19.3ZPZK6AkQLl38FdmXwNBT6IRKmZxxgDlE1EQ6y3qdC8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/todo?status",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"todo"
+					],
+					"query": [
+						{
+							"key": "status",
+							"value": "pedding",
+							"disabled": true
+						},
+						{
+							"key": "status",
+							"value": "completed",
+							"disabled": true
+						},
+						{
+							"key": "status",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "tarefa - POST",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2MzM4OTYwNDEsInVzZXJfbmFtZSI6InVzZXIwM0BpdGF1LmNvbS5iciIsImp0aSI6ImY0NWQ4ZWZkLWNmZTAtNDdjOS1iZjZlLWE4YzQzNmQxNDc3MyIsImNsaWVudF9pZCI6Iml0YXUtY2xpZW50Iiwic2NvcGUiOlsicmVhZCIsIndyaXRlIl19.9hwCQFRevng83x4kPjEC4z6unWbzlqJhcxG_ahctGlQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"descricao\": \"Criação de nova funcionalidade\",\r\n    \"resumo\": \"Após todos os passos mandar um email com proposta para contratar o dev :P\",    \r\n    \"status\": \"pedding\",\r\n    \"dataCadastro\": \"2021-10-09T15:57:10\",\r\n    \"dataAtualizacao\": null\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/todo",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"todo"
+					],
+					"query": [
+						{
+							"key": "status",
+							"value": "pedding",
+							"disabled": true
+						},
+						{
+							"key": "status",
+							"value": "completed",
+							"disabled": true
+						},
+						{
+							"key": "status",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "tarefa - PUT",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2MzM4MjM3MDIsInVzZXJfbmFtZSI6InVzZXIwMUBpdGF1LmNvbS5iciIsImp0aSI6IjVhYWUxMjY5LTg4YzUtNDExMC04Yjc2LTEwYzJhMjMwNzhlYSIsImNsaWVudF9pZCI6Iml0YXUtY2xpZW50Iiwic2NvcGUiOlsicmVhZCIsIndyaXRlIl19.1MLNleKMHAdz5HfzRQBFMf6raNjjBs_4rp9zRVZLfOE",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/todo/3/completed",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"todo",
+						"3",
+						"completed"
+					],
+					"query": [
+						{
+							"key": "status",
+							"value": "pedding",
+							"disabled": true
+						},
+						{
+							"key": "status",
+							"value": "completed",
+							"disabled": true
+						},
+						{
+							"key": "status",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Genarate Token user comum",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "itau-client",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "aXRhdS1jbGllbnQtc2VuaGEx",
+							"type": "string"
+						},
+						{
+							"key": "saveHelperData",
+							"type": "any"
+						},
+						{
+							"key": "showPassword",
+							"value": false,
+							"type": "boolean"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic YjUyNzE3YzI4ZDk1NDFiMDg1OTI1YTNjMDQ0ZjQ5OTA6NzUzOWYzZGM5OWIxNDU4MjlhMWE2ZmE2OTEyZmQzYzM=",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json;charset=UTF-8",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "http://localhost:5000/oauth/token?grant_type=password&username=user02@itau.com.br&password=itau@123",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"oauth",
+						"token"
+					],
+					"query": [
+						{
+							"key": "grant_type",
+							"value": "password"
+						},
+						{
+							"key": "username",
+							"value": "user02@itau.com.br"
+						},
+						{
+							"key": "password",
+							"value": "itau@123"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Genarate Token User super",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "aXRhdS1jbGllbnQtc2VuaGEx",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "itau-client",
+							"type": "string"
+						},
+						{
+							"key": "saveHelperData",
+							"type": "any"
+						},
+						{
+							"key": "showPassword",
+							"value": false,
+							"type": "boolean"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic YjUyNzE3YzI4ZDk1NDFiMDg1OTI1YTNjMDQ0ZjQ5OTA6NzUzOWYzZGM5OWIxNDU4MjlhMWE2ZmE2OTEyZmQzYzM=",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json;charset=UTF-8",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "http://localhost:5000/oauth/token?grant_type=password&username=user01@itau.com.br&password=itau@123",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"oauth",
+						"token"
+					],
+					"query": [
+						{
+							"key": "grant_type",
+							"value": "password"
+						},
+						{
+							"key": "username",
+							"value": "user01@itau.com.br"
+						},
+						{
+							"key": "password",
+							"value": "itau@123"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
