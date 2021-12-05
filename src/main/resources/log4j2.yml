@@ -21,7 +21,7 @@ Configuration:
 
   Loggers:
     logger:
-      - name: br.com.neurotech.riskpack.mesa
+      - name: br.com.itau.desafio
         level: debug
         additivity: false
         AppenderRef:
