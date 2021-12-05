@@ -1,20 +1,5 @@
-drop table if exists desafio CASCADE;
 drop table if exists tarefa CASCADE;    
 drop table if exists usuario CASCADE;
-    
-create table desafio (
-   logic integer not null,
-    model varchar(255) not null,
-    mxf integer,
-    mxr integer,
-    plat integer,
-    ptid varchar(255),
-    sam integer check (sam>=0),
-    serial varchar(255) not null,
-    verfm varchar(255),
-    version varchar(255) not null,
-    primary key (logic)
-);
 
 create table tarefa (
     id BIGINT not null,
